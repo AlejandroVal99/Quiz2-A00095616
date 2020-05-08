@@ -6,6 +6,8 @@ class Cuadrado implements Runnable{
 	PApplet app;
 	boolean sigueH;
 	private int direc;
+	private int limitearr;
+	private int limiteaba;
 
 	public Cuadrado(int posx,int posy,int r,int g, int b, PApplet app) {
 		
@@ -17,6 +19,8 @@ class Cuadrado implements Runnable{
 		this.app = app;
 		this.sigueH = true; 
 		this.direc = 5;
+		this.limitearr = posy+100;
+		this.limiteaba = posy-100;
 		
 	}
 
@@ -27,7 +31,7 @@ class Cuadrado implements Runnable{
 			
 			posy += direc;
 			
-			if(posy <= posy-100 || posy >= posy+100) {
+			if(posy <= limiteaba || posy >= limitearr) {
 				direc*=-1;
 			}
 			
