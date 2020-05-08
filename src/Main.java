@@ -24,8 +24,11 @@ public class Main extends PApplet {
 	public void setup() {
 
 		llenarMapa();
-		
-		/*profe nunca lo corri pero espero funciones cuando vos lo hagas, se hizo lo que se pudo*/
+
+		/*
+		 * profe nunca lo corri pero espero funciones cuando vos lo hagas, se hizo lo
+		 * que se pudo
+		 */
 
 	}
 
@@ -93,15 +96,20 @@ public class Main extends PApplet {
 
 				mapa[columnas][filas].pintar();
 
-				if (muevoCuadro == true) {
-					Thread nuevoH = new Thread(mapa[columnas][filas]);
-					nuevoH.start();
+				if (mapa[columnas][filas].getR() == 0) {
+
+					if (muevoCuadro == true) {
+						Thread nuevoH = new Thread(mapa[columnas][filas]);
+						nuevoH.start();
+					}
 				}
 
 			}
-		}
 
+		}
 	}
+
+	
 
 	public void llenarMapa() {
 
