@@ -95,10 +95,12 @@ public class Main extends PApplet {
 			for (int filas = 0; filas < 6; filas++) {
 
 				mapa[columnas][filas].pintar();
-
+				
+				if (muevoCuadro == true) {
+					
 				if (mapa[columnas][filas].getR() == 0) {
 
-					if (muevoCuadro == true) {
+					
 						Thread nuevoH = new Thread(mapa[columnas][filas]);
 						nuevoH.start();
 					}
