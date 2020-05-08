@@ -16,7 +16,7 @@ class Cuadrado implements Runnable{
 		this.b = b;
 		this.app = app;
 		this.sigueH = true; 
-		this.direc = 80;
+		this.direc = 5;
 		
 	}
 
