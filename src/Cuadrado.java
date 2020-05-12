@@ -7,7 +7,8 @@ class Cuadrado implements Runnable{
 	boolean sigueH;
 	private int direc;
 	private int limitearr;
-	private int limiteaba;
+	private
+	int limiteaba;
 
 	public Cuadrado(int posx,int posy,int r,int g, int b, PApplet app) {
 		
@@ -27,7 +28,7 @@ class Cuadrado implements Runnable{
 	
 	public void run() {
 		
-		while(sigueH) {
+		if(sigueH) {
 			
 			posy += direc;
 			
